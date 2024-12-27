@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenis dan Fungsi Server</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header & Profile */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 300px;
+            border-radius: 20%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-info {
+            text-align: left;
+            margin-top: -100px;
+        }
+
+        /* Server Grid */
+        .server-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .server-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .server-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .server-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .server-content {
+            padding: 20px;
+        }
+
+        .server-title {
+            color: #2980b9;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .server-description {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        /* Features */
+        .feature-list {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .feature-item {
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        /* Download Section */
+        .download-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .download-title {
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .download-list {
+            list-style: none;
+        }
+
+        .download-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .download-item:hover {
+            transform: translateX(5px);
+        }
+
+        .file-info {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .download-button {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .download-button:hover {
+            background: #2980b9;
+        }
+
+        /* Conclusion */
+        .conclusion {
+            margin-top: 40px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            border-radius: 0 5px 5px 0;
+            color: #2c3e50;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-info {
+                text-align: center;
+            }
+
+            .server-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .download-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <header>
+            <h1>JENIS DAN FUNGSI SERVER DALAM JARINGAN KOMPUTER</h1>
+        </header>
+
+        <div class="profile">
+            <img src="ftlatar merah.jpg" alt="Foto Profil" class="profile-photo">
+            <div class="profile-info">
+                <h2>Ahmad Nidzomunnashil Makmur</h2>
+                <p>NIM: 607012400122</p>
+                <p>Kelas: 48-02</p>
+                <p>Matakuliah: Jaringan Komputer</p>
+            </div>
+        </div>
+
+        <!-- Server Grid -->
+        <div class="server-grid">
+            <!-- Web Server -->
+            <div class="server-card">
+                <img src="Web-server.png" alt="Web Server" class="server-image">
+                <div class="server-content">
+                    <div class="server-title">Web Server</div>
+                    <div class="server-description">
+                        Server yang melayani permintaan halaman website dan aplikasi web.
+                        <ul class="feature-list">
+                            <li class="feature-item">Apache: Open source, fleksibel, mendukung berbagai bahasa</li>
+                            <li class="feature-item">NGINX: Performa tinggi, efisien untuk traffic besar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Database Server -->
+            <div class="server-card">
+                <img src="data base server.jpg" alt="Database Server" class="server-image">
+                <div class="server-content">
+                    <div class="server-title">Database Server</div>
+                    <div class="server-description">
+                        Server untuk mengelola dan menyimpan database.
+                        <ul class="feature-list">
+                            <li class="feature-item">MySQL: Populer untuk aplikasi web</li>
+                            <li class="feature-item">PostgreSQL: Cocok untuk data kompleks enterprise</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Server -->
+            <div class="server-card">
+                <img src="mail server.png" alt="Email Server" class="server-image">
+                <div class="server-content">
+                    <div class="server-title">Email Server</div>
+                    <div class="server-description">
+                        Server untuk layanan email dan komunikasi.
+                        <ul class="feature-list">
+                            <li class="feature-item">Exchange Server: Solusi email enterprise Microsoft</li>
+                            <li class="feature-item">Postfix: Open source dengan keamanan tinggi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- File Server -->
+            <div class="server-card">
+                <img src="file server.png" alt="File Server" class="server-image">
+                <div class="server-content">
+                    <div class="server-title">File Server</div>
+                    <div class="server-description">
+                        Server untuk berbagi dan menyimpan file.
+                        <ul class="feature-list">
+                            <li class="feature-item">Windows File Server: Kontrol akses detail</li>
+                            <li class="feature-item">Samba: Berbagi file lintas platform</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DNS Server -->
+            <div class="server-card">
+                <img src="dns sever.png" alt="DNS Server" class="server-image">
+                <div class="server-content">
+                    <div class="server-title">DNS Server</div>
+                    <div class="server-description">
+                        Server untuk penerjemahan nama domain ke IP.
+                        <ul class="feature-list">
+                            <li class="feature-item">BIND: Standar industry DNS</li>
+                            <li class="feature-item">Windows DNS: Terintegrasi dengan Active Directory</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Server -->
+            <div class="server-card">
+                <img src="app server.jpg" alt="Application Server" class="server-image">
+                <div class="server-content">
+                    <div class="server-title">Application Server</div>
+                    <div class="server-description">
+                        Server untuk aplikasi berbasis Java.
+                        <ul class="feature-list">
+                            <li class="feature-item">Tomcat: Ringan untuk web apps</li>
+                            <li class="feature-item">JBoss: Lengkap untuk enterprise apps</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proxy Server -->
+            <div class="server-card">
+                <img src="proxy server.jpg" alt="Proxy Server" class="server-image">
+                <div class="server-content">
+                    <div class="server-title">Proxy Server</div>
+                    <div class="server-description">
+                        Server untuk optimasi dan keamanan jaringan.
+                        <ul class="feature-list">
+                            <li class="feature-item">Squid: Caching dan filtering konten</li>
+                            <li class="feature-item">HAProxy: Load balancing handal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FTP Server -->
+            <div class="server-card">
+                <img src="ftp server.jpg" alt="FTP Server" class="server-image">
+                <div class="server-content">
+                    <div class="server-title">FTP Server</div>
+                    <div class="server-description">
+                        Server untuk transfer file.
+                        <ul class="feature-list">
+                            <li class="feature-item">vsftpd: Keamanan tinggi</li>
+                            <li class="feature-item">FileZilla Server: Interface ramah pengguna</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Server -->
+            <div class="server-card">
+                <img src="game server.jpg" alt="Game Server" class="server-image">
+                <div class="server-content">
+                    <div class="server-title">Game Server</div>
+                    <div class="server-description">
+                        Server untuk game online.
+                        <ul class="feature-list">
+                            <li class="feature-item">Minecraft Server: Hosting game Minecraft</li>
+                            <li class="feature-item">Steam Server: Berbagai game populer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Media Server -->
+            <div class="server-card">
+                <img src="media server.jpg" alt="Media Server" class="server-image">
+                <div class="server-content">
+                    <div class="server-title">Media Server</div>
+                    <div class="server-description">
+                        Server untuk streaming media.
+                        <ul class="feature-list">
+                            <li class="feature-item">Plex: Solusi streaming premium</li>
+                            <li class="feature-item">Jellyfin: Alternatif open source</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="conclusion">
+            <p>
+                Setiap server dapat dikonfigurasi sesuai kebutuhan spesifik organisasi dan dapat diimplementasikan baik secara fisik maupun virtual. Pemilihan jenis server tergantung pada skala organisasi, kebutuhan performa, anggaran, dan kemampuan tim IT yang tersedia.
+            </p>
+        </div>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <div class="download-title">Sumber dan Materi Pendukung</div>
+            <ul class="download-list">
+                <li class="download-item">
+                    <div>
+                        <span>Lampiran file tutorial Hosting</span>
+                        <div class="file-info">Format: PDF • Ukuran: 2.5 MB</div>
+                    </div>
+                    <a href="Ahmad Nidzomunnashil M_607012400122 TP1.pdf" class="download-button" download>
+                        Download PDF
+                    </a>
+                </li>
+                
+                <li class="download-item">
+                    <div>
+                        <span>Sumber Artikel</span>
+                    </div>
+                    <a href="https://cloudmatika.co.id/blog-detail/macam-%e2%80%93-macam-jenis-server-serta-fungsinya-b111" class="download-button" >
+                        Pergi Ke halaman
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
